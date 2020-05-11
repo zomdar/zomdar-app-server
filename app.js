@@ -6,4 +6,10 @@ app.get('/', (req, res) => {
 	res.send('whats up dawg!');
 });
 
+app.get('/demo', (req, res) => {
+	res.set('X-sup-dawg', 'heyyo');
+	res.status(418);
+	res.send('i rike turtles');
+})
+
 app.listen(port, () => console.log(`zomdar app listening on port ${port}!`));
